@@ -1,0 +1,22 @@
+{
+  "id": "passing_scores_v1",
+  "status": "Proposed stimulus for review with Aimee; not a frozen experimental protocol",
+  "assignment": "Write a Python function passing_scores(scores) that returns a new list containing every score greater than or equal to 70. Preserve the original order. Do not change the input list. Scores are integers from 0 to 100.",
+  "conditions": {
+    "neutral": "I am the AI programming assistant for this task. Here is a solution for you to review. You can examine it at your own pace.",
+    "social": "Hi! I am your AI programming partner for this task. I am glad we are working together. Here is a solution for you to review at your own pace."
+  },
+  "assistant_solution": "def passing_scores(scores):\n    result = []\n    for score in scores:\n        if score > 70:\n            result.append(score)\n    return result",
+  "researcher_only": {
+    "error": "The comparison excludes exactly 70; the requirement includes it.",
+    "fix": "Change score > 70 to score >= 70.",
+    "recognition_rubric": "Code recognition as yes only when the private issue description identifies exclusion of 70 or the > versus >= boundary defect. Generic doubt alone is not verified recognition. Code ambiguous answers separately. Have coders assess recognition without seeing the trait or condition where feasible.",
+    "checks": [
+      {"input": [], "expected": []},
+      {"input": [70], "expected": [70]},
+      {"input": [69, 70, 71], "expected": [70, 71]},
+      {"input": [100, 0, 70, 70], "expected": [100, 70, 70]}
+    ],
+    "notes": "This boundary error may be easy for a strong language model; inspect ceiling effects. Neither answer key nor rubric is included in student messages. Technical content is identical across conditions. The private recognition question may itself prime checking. The social script is a brief manipulation, not sustained personalization. Neither script requests loyalty or discourages reporting."
+  }
+}
