@@ -174,3 +174,21 @@ its scoring. Prompts, task, and simulation design are prototype engineering
 choices for this project.
 
 Prepared by Astra / Codex for review.
+
+/*********************************************
+Human review by dH 22 Oct 26 
+
+Token usage cost is high considering GPT 4o usage, consider using Nemotron 30B running locally on M3 Max, 128 Gig Unified memory...
+
+Your two successful runs used 23,887 tokens, costing approximately 7.6 cents.
+Run	API calls	Input tokens	Output tokens	Estimated cost
+Smoke test	4	3,093	342	$0.0112
+Full rehearsal	24	18,581	1,871	$0.0652
+Total	28	21,674	2,213	$0.0763
+
+
+The dashboard filtered to “Ravelya Synthetic Student Agents 22 oct 26” confirms the 21,674 input tokens. Output counts come from your saved response logs.
+
+Cost uses GPT-4o’s listed rates of $2.50/million input tokens and $10/million output tokens. The dashboard’s spend figures currently differ, so 7.6 cents is a calculated estimate, not a confirmed billed total. developers.openai.com
+
+********************************************/
